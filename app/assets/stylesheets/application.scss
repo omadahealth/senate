@@ -1,0 +1,9 @@
+/*
+ * Note: this file was converted from a .css manifest, because the asset
+ * pipeline sandboxes each of its includes so you can't share variables
+ * between them.  Now we can use color variables in the layout partial.
+ */
+
+@import 'bootstrap';
+@import 'colors';
+@import 'layout';

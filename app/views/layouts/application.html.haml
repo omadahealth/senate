@@ -1,0 +1,32 @@
+!!! 5
+%html
+  %head
+    = display_meta_tags site: site_title_helper, reverse: true
+    %meta{ name:'viewport', content:'width=device-width, initial-scale=1.0' }
+    = stylesheet_link_tag    'application', media: 'all',
+                                            data: {'turbolinks-track' => true}
+    = csrf_meta_tags
+    = content_for :head
+
+  %body
+    -# For standard Bootstrap navbar themes, use navbar-default or navbar-inverse
+    = bootstrap_navbar_helper main_navbar_data, 'navbar-senate'
+
+    .container
+      - [:alert, :notice].each do |flash_level|
+        - if flash[flash_level]
+          .alert{ class: "alert-#{flash_level == :notice ? 'success' : 'danger'}" }
+            %button.close{ type: 'button',
+                           data: { dismiss: 'alert'},
+                           'aria-hidden' => 'true'}
+              &times;
+
+            = flash[flash_level].gsub("\n", '<br>').html_safe
+
+      = page_heading_helper
+
+      = yield
+
+    #load-javascripts
+      = javascript_include_tag 'application'
+      = content_for :javascript

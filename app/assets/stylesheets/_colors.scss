@@ -1,0 +1,45 @@
+////////// Example Theme: Vintage Ralph Lauren //////////
+////////// Based on https://color.adobe.com/Vintage-Ralph-Lauren-color-theme-2216979/
+//////////
+
+// Reds
+$color-buccaneer: #703030;
+$color-santa-fe: #b96453;
+// Greens
+$color-willow-grove: #6b6f66;
+// Blues
+$color-outer-space: #2f343b;
+// Whites / Creams
+$color-hampton: #e3cda4;
+$color-desert-storm: #f1f1f0;
+$color-wheat: #f3ddb4;
+
+//$background-color: $color-outer-space;
+//$navbar-background-color: $color-buccaneer;
+//$navbar-brand-color: $color-santa-fe;
+//$navbar-item-unselected: $color-hampton;
+//$navbar-item-selected: $color-desert-storm;
+//$navbar-item-hover: $color-desert-storm;
+//$heading-color: $color-santa-fe;
+//$default-font-color: $color-wheat;
+
+//////////
+////////// Theme: Van Gogh Starry Night
+//////////
+
+// Blues
+$color-hillside: #110f1f;
+$color-sky: #1e5397;
+$color-milky-way: #3ca3d2;
+// Yellows
+$color-sun: #f09300;
+$color-sunshine: #f0df63;
+
+$background-color: $color-hillside;
+$navbar-background-color: $color-sky;
+$navbar-brand-color: $color-sun;
+$navbar-item-unselected: $color-milky-way;
+$navbar-item-selected: $color-sunshine;
+$navbar-item-hover: $color-sunshine;
+$heading-color: $color-sun;
+$default-font-color: $color-sunshine;
