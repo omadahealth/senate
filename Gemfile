@@ -50,3 +50,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'annotate', group: 'development'
 group :development, :test do
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'shoulda-matchers'
+  gem 'timecop'
+  gem 'codeclimate-test-reporter', require: nil
+end
