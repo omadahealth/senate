@@ -69,11 +69,11 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'bootstrap-sass'
 gem 'meta-tags', require: 'meta_tags'
+gem 'paper_trail'
 gem 'devise'
 gem 'devise_ldap_authenticatable'
 gem 'sidekiq'
 gem 'sidekiq-cron'
-gem 'sinatra', '>= 1.3.0', require: false
 gem 'wat_catcher'
 gem 'lograge'
 group :development do
