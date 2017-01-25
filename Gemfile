@@ -73,3 +73,5 @@ gem 'devise'
 gem 'devise_ldap_authenticatable'
 gem 'sidekiq'
 gem 'sidekiq-cron'
+gem 'sinatra', '>= 1.3.0', require: false
+gem 'wat_catcher'
