@@ -62,3 +62,5 @@ group :test do
   gem 'timecop'
   gem 'codeclimate-test-reporter', require: nil
 end
+
+gem 'haml-rails'
