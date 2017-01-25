@@ -3,7 +3,7 @@ require_dependency "<%= namespaced_file_path %>/application_controller"
 
 <% end -%>
 <% module_namespacing do -%>
-class <%= controller_class_name %>Controller < ApplicationController
+class <%= controller_class_name %>Controller < LoggedInController # < ApplicationController
   before_action :load_<%= singular_table_name %>, only: [:show, :edit, :update, :destroy]
   respond_to :html
 
