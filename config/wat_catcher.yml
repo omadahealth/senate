@@ -1,0 +1,10 @@
+production: &default
+  host: "https://wattle.omadahealth.net"
+
+development:
+  <<: *default
+  disabled: true
+
+test:
+  <<: *default
+  disabled: true
