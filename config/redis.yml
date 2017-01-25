@@ -1,0 +1,10 @@
+development: &development
+  :url: 'redis://localhost:6379/0'
+  :host: 'localhost'
+  :port: '6379'
+  :db: 0
+
+test: &test
+  :url: 'redis://localhost:6379/2'
+  <<: *development
+  :db: 2 # rails cache is db 1, so we should avoid that
