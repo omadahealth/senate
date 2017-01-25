@@ -1,0 +1,18 @@
+- title "Sign In"
+
+= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: "form-horizontal", role: "form" } do |f|
+  .form-group
+    = f.label :username, class: "col-sm-2 control-label"
+    .col-sm-5
+      = f.text_field :username, :autofocus => true, class: "form-control"
+
+  .form-group
+    = f.label :password, class: "col-sm-2 control-label"
+    .col-sm-5
+      = f.password_field :password, :autofocus => true, class: "form-control"
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit "Sign in", class: "btn btn-primary"
+
+= render "devise/shared/links"
