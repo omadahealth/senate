@@ -14,5 +14,7 @@ RSpec.describe User, type: :model do
     # https://github.com/thoughtbot/shoulda-matchers has a full list of matchers.
   end
 
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "validations" do
+    it { should validate_presence_of :username }
+  end
 end
