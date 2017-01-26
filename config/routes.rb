@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :elastic_searches
+  resources :redis
+  resources :postgresqls
+  resources :secrets
+  resources :application_environments
+  resources :environments
+  resources :applications
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "home#index"
 end

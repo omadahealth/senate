@@ -1,0 +1,15 @@
+- title "application_environment #{@application_environment.id}"
+%p
+  %b Application:
+  = @application_environment.application_id
+%p
+  %b Environment:
+  = @application_environment.environment_id
+%p
+  %b Rails env:
+  = @application_environment.rails_env
+
+%br
+= link_to "Edit", edit_application_environment_path(@application_environment), class: 'btn btn-sm btn-primary'
+\|
+= link_to "Back", application_environments_path

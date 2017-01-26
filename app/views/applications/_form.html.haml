@@ -1,0 +1,13 @@
+= simple_form_for @application, html: { class: "form-horizontal" },
+                                               wrapper: :horizontal_form do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :uses_sidekiq
+    = f.input :uses_postgres
+    = f.input :uses_redis
+    = f.input :uses_ldap
+
+  .form-actions
+    = f.button :submit, class: "btn btn-primary"

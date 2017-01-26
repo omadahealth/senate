@@ -1,0 +1,32 @@
+- title "ElasticSearch"
+
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Application
+      %th Environment
+      %th User
+      %th Password
+      %th Host
+      %th Port
+      %th
+
+  %tbody
+    - @elastic_searches.each do |elastic_search|
+      %tr
+        %td= elastic_search.application.name
+        %td= elastic_search.environment.name
+        %th= elastic_search.user
+        %th= elastic_search.password
+        %th= elastic_search.host
+        %th= elastic_search.port.to_s
+        %td
+          = link_to "Show", elastic_search, class: "btn btn-xs btn-success"
+          = link_to "Edit", edit_elastic_search_path(elastic_search), class: "btn btn-xs btn-info"
+          = link_to "Destroy", elastic_search, :method => :delete,
+                               :data => { :confirm => "Are you sure?" },
+                               class: "btn btn-xs btn-danger"
+
+%br
+
+= link_to "New ElasticSearch Configuration", new_elastic_search_path, class: "btn btn-primary"

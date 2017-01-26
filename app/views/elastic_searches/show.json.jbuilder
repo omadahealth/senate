@@ -1,0 +1,1 @@
+json.partial! "elastic_searches/elastic_search", elastic_search: @elastic_search

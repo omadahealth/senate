@@ -1,0 +1,1 @@
+json.array! @application_environments, partial: 'application_environments/application_environment', as: :application_environment

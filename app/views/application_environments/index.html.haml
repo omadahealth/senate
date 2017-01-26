@@ -1,0 +1,26 @@
+- title "Mappings of Applications to Environments"
+
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Application
+      %th Environment
+      %th Rails Environment
+      %th
+
+  %tbody
+    - @application_environments.each do |application_environment|
+      %tr
+        %td= application_environment.application.name
+        %td= application_environment.environment.name
+        %td= application_environment.rails_env.capitalize
+        %td
+          = link_to "Show", application_environment, class: "btn btn-xs btn-success"
+          = link_to "Edit", edit_application_environment_path(application_environment), class: "btn btn-xs btn-info"
+          = link_to "Destroy", application_environment, :method => :delete,
+                               :data => { :confirm => "Are you sure?" },
+                               class: "btn btn-xs btn-danger"
+
+%br
+
+= link_to "New Application Environment", new_application_environment_path, class: "btn btn-primary"

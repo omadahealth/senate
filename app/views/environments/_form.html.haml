@@ -1,0 +1,10 @@
+= simple_form_for @environment, html: { class: "form-horizontal" },
+                                               wrapper: :horizontal_form do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :consul_dc
+
+  .form-actions
+    = f.button :submit, class: "btn btn-primary"

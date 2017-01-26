@@ -1,0 +1,12 @@
+- title "environment #{@environment.id}"
+%p
+  %b Name:
+  = @environment.name
+%p
+  %b Consul dc:
+  = @environment.consul_dc
+
+%br
+= link_to "Edit", edit_environment_path(@environment), class: 'btn btn-sm btn-primary'
+\|
+= link_to "Back", environments_path

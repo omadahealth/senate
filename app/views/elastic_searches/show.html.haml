@@ -1,0 +1,9 @@
+- title "elastic_search #{@elastic_search.id}"
+%p
+  %b Application environment:
+  = @elastic_search.application_environment_id
+
+%br
+= link_to "Edit", edit_elastic_search_path(@elastic_search), class: 'btn btn-sm btn-primary'
+\|
+= link_to "Back", elastic_searches_path

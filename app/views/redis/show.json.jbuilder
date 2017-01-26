@@ -1,0 +1,1 @@
+json.partial! "redis/redi", redi: @redi

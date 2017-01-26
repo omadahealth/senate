@@ -1,0 +1,1 @@
+json.array! @redis, partial: 'redis/redi', as: :redi

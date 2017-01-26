@@ -22,6 +22,27 @@ module LayoutHelper
           {
             name: 'Home', href: root_path
           },
+          {
+            name: 'Applications', href: applications_path
+          },
+          {
+            name: 'Environments', href: environments_path
+          },
+          {
+            name: 'Application Environment Mappings', href: application_environments_path
+          },
+          {
+            name: 'Secrets', href: secrets_path
+          },
+          {
+            name: 'PostgreSQL', href: postgresqls_path
+          },
+          {
+            name: 'Redis', href: redis_path
+          },
+          {
+            name: 'ElasticSearch', href: elastic_searches_path
+          }
         ]
       },
       {

@@ -1,0 +1,34 @@
+- title "PostgreSQL"
+
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Application
+      %th Environment
+      %th Username
+      %th Password
+      %th Host
+      %th Port
+      %th Database
+      %th
+
+  %tbody
+    - @postgresqls.each do |postgresql|
+      %tr
+        %td= postgresql.application.name
+        %td= postgresql.environment.name
+        %td= postgresql.user
+        %td= postgresql.password
+        %td= postgresql.host
+        %td= postgresql.port.to_s
+        %td= postgresql.database
+        %td
+          = link_to "Show", postgresql, class: "btn btn-xs btn-success"
+          = link_to "Edit", edit_postgresql_path(postgresql), class: "btn btn-xs btn-info"
+          = link_to "Destroy", postgresql, :method => :delete,
+                               :data => { :confirm => "Are you sure?" },
+                               class: "btn btn-xs btn-danger"
+
+%br
+
+= link_to "New Postgresql Configuration", new_postgresql_path, class: "btn btn-primary"

@@ -1,0 +1,24 @@
+- title "Environments"
+
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Name
+      %th Consul Datacenter Name
+      %th
+
+  %tbody
+    - @environments.each do |environment|
+      %tr
+        %td= environment.name
+        %td= environment.consul_dc
+        %td
+          = link_to "Show", environment, class: "btn btn-xs btn-success"
+          = link_to "Edit", edit_environment_path(environment), class: "btn btn-xs btn-info"
+          = link_to "Destroy", environment, :method => :delete,
+                               :data => { :confirm => "Are you sure?" },
+                               class: "btn btn-xs btn-danger"
+
+%br
+
+= link_to "New Environment", new_environment_path, class: "btn btn-primary"

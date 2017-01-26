@@ -1,0 +1,32 @@
+- title "Applications"
+
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Name
+      %th Sidekiq
+      %th PostgreSQL
+      %th Redis
+      %th ElasticSearch
+      %th Secrets
+      %th
+
+  %tbody
+    - @applications.each do |application|
+      %tr
+        %td= application.name
+        %td= application.redis.empty? ? "✘" : "✓"
+        %td= application.postgresqls.empty? ? "✘" : "✓"
+        %td= application.redis.empty? ? "✘" : "✓"
+        %td= application.elastic_searches.empty? ? "✘" : "✓"
+        %td= application.secrets.empty? ? "✘" : "✓"
+        %td
+          = link_to "Show", application, class: "btn btn-xs btn-success"
+          = link_to "Edit", edit_application_path(application), class: "btn btn-xs btn-info"
+          = link_to "Destroy", application, :method => :delete,
+                               :data => { :confirm => "Are you sure?" },
+                               class: "btn btn-xs btn-danger"
+
+%br
+
+= link_to "New Application", new_application_path, class: "btn btn-primary"

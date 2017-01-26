@@ -1,0 +1,1 @@
+json.partial! "application_environments/application_environment", application_environment: @application_environment

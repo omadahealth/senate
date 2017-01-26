@@ -1,0 +1,9 @@
+- title "postgresql #{@postgresql.id}"
+%p
+  %b Application environment:
+  = @postgresql.application_environment_id
+
+%br
+= link_to "Edit", edit_postgresql_path(@postgresql), class: 'btn btn-sm btn-primary'
+\|
+= link_to "Back", postgresqls_path

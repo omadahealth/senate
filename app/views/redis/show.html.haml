@@ -1,0 +1,9 @@
+- title "redi #{@redi.id}"
+%p
+  %b Application environment:
+  = @redi.application_environment_id
+
+%br
+= link_to "Edit", edit_redi_path(@redi), class: 'btn btn-sm btn-primary'
+\|
+= link_to "Back", redis_path

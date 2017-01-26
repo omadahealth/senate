@@ -1,0 +1,1 @@
+json.partial! "postgresqls/postgresql", postgresql: @postgresql

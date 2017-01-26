@@ -1,0 +1,14 @@
+= simple_form_for @redi, html: { class: "form-horizontal" },
+                                               wrapper: :horizontal_form do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.select :application_environment_id, ApplicationEnvironment.all.collect { |ae| [ae.application.name+' '+ae.rails_env, ae.id] }
+    = f.input :user
+    = f.input :password
+    = f.input :host
+    = f.input :port
+    = f.input :db
+
+  .form-actions
+    = f.button :submit, class: "btn btn-primary"

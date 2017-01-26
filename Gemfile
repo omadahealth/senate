@@ -69,6 +69,8 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'bootstrap-sass'
 gem 'meta-tags', require: 'meta_tags'
+gem 'apohypaton', path: "../apohypaton"
+gem 'diplomat', path: "gems/diplomat"
 gem 'paper_trail'
 gem 'devise'
 gem 'devise_ldap_authenticatable'

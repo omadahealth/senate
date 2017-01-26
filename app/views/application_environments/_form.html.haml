@@ -1,0 +1,11 @@
+= simple_form_for @application_environment, html: { class: "form-horizontal" },
+                                               wrapper: :horizontal_form do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.select :application_id, Application.all.collect { |a| [a.name, a.id] }
+    = f.select :environment_id, Environment.all.collect { |e| [e.name, e.id] }
+    = f.input :rails_env
+
+  .form-actions
+    = f.button :submit, class: "btn btn-primary"

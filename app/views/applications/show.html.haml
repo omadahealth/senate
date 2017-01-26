@@ -1,0 +1,21 @@
+- title "application #{@application.id}"
+%p
+  %b Name:
+  = @application.name
+%p
+  %b Uses sidekiq:
+  = @application.uses_sidekiq
+%p
+  %b Uses postgres:
+  = @application.uses_postgres
+%p
+  %b Uses redis:
+  = @application.uses_redis
+%p
+  %b Uses ldap:
+  = @application.uses_ldap
+
+%br
+= link_to "Edit", edit_application_path(@application), class: 'btn btn-sm btn-primary'
+\|
+= link_to "Back", applications_path

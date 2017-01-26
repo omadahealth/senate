@@ -1,0 +1,1 @@
+json.array! @postgresqls, partial: 'postgresqls/postgresql', as: :postgresql
